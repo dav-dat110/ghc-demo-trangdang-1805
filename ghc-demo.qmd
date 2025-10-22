@@ -1,0 +1,105 @@
+---
+title: GHC Demo Assignment
+subtitle: CSC 110 - Fall 2025
+author: Trang Dang
+date: 10/20/2025
+format:
+  pdf:
+    toc: true
+    toc-depth: 1
+    toc-location: right-body
+    fig-width: 8
+    fig-height: 5
+    geometry:
+      - top=20mm
+      - left=20mm
+      - right=20mm
+      - heightrounded
+  html: 
+    toc: true
+    toc-depth: 1
+    toc-location: right-body
+    theme: cerulean
+---
+
+# Setup
+
+```{r}
+#| include: false
+library(tidyverse)
+```
+
+# Homework
+
+```{r}
+#| fig-cap: "Fuel mileage scatterplot"
+ggplot(
+  mpg,
+  aes(
+    x = displ,
+    y = hwy
+  )
+) +
+  geom_point() +
+  labs(
+    title = "Fuel Efficiency by Vehicle Engine Size",
+    x = "engine displacement, in litres",
+    y = "highway miles per gallon"
+  )
+```
+
+<https://davidson.edu>
+
+-   DAT 153: Database Programming
+-   ECO 213: Cost Accounting
+-   BIO 105: Biology for Life
+
+1.  The Devil Wears Prada
+2.  Atonement
+3.  Little Women
+
+Footnote 1,[^1] and Footnote 2[^2]
+
+[^1]: Footnote number 1.
+
+[^2]: Footnote number 2.
+
+$$ax{^2} +bx + c = 0$$
+
+```{mermaid}
+flowchart LR
+  A(Davidson College) --> B{Data Science Department}
+  B --> C[Professor Heyer]
+  B --> D[Professor Wang]
+  B --> E[Professor Benbow]
+```
+
+> Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+
+::: callout-note
+This is note
+:::
+
+::: callout-tip
+This is tip
+:::
+
+::: {.callout-important collapse="true"}
+This is important
+:::
+
+{{< pagebreak >}}
+
+# Reflection
+
+***Reflection 1***
+
+One feature I found really useful is the ability to insert images and figures with captions directly in Quarto. In many research papers I’ve read, authors include clear captions for every figure and often provide a table of content for the figures or tables so readers can easily locate specific data visualizations. Using Quarto’s figure syntax, such as including a chunk option *#| fig-cap: "Fuel mileage scatterplot"*, I can create well-labeled visuals that look professional and organized. This will be especially helpful for my final project because it allows me to present data visualizations in a structured way, making it easier for the audience to understand and reference key insights throughout the webpage.
+
+***Reflection 2*** 
+
+Another helpful trick I learned is how to use YAML options at the top of a Quarto document to control the overall layout and appearance of the webpage. For example, by adding a `theme: cerulean`, I can customize the color of my page As someone that is very obsessed with making things look aesthetic, I would definitely use these techniques a lot to help my page become more visually appealing. Having the power to modify the visual style directly will make my project stand out and feel more like a polished publication rather than just a plain report.
+
+***Reflection 3***
+
+I also learn Quarto's ability to format text and organize content with headings and subheadings. Writing everything as plain text can quickly become hard to read, especially for long reports or webpages, so breaking content into sections makes it much easier for the audience to follow. Using Markdown, I can create # Heading, ## Subheading, or even ### Smaller section to structure my project clearly. I also plan to use **bold** and *italic* text to emphasize key concepts and inline code like `ggplot()` to highlight technical details. By combining headings, subheadings, and text formatting, I can make my final project not only more readable but also more professional and visually organized, helping readers focus on the most important information without getting overwhelmed.
